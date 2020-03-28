@@ -1,9 +1,9 @@
 package Lesson1;
 
-public class Man implements Do {
+public class Man implements Participant {
 
-    private int runLength;
-    private int jumpHeight;
+    private final int runLength;
+    private final int jumpHeight;
 
     public Man(int runLength, int jumpHeight) {
         this.runLength = runLength;
@@ -13,11 +13,15 @@ public class Man implements Do {
 
     @Override
     public int jump() {
-        return 0;
+        System.out.printf("Кот перепрыгнул %d%n", jumpHeight);
+        return jumpHeight;
+
+
     }
 
     @Override
     public int run() {
-        return 0;
+        System.out.printf("Кот пробежал %d%n", runLength);
+        return runLength;
     }
 }

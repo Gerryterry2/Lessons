@@ -1,9 +1,9 @@
 package Lesson1;
 
-public class Cat implements Do {
+public class Cat implements Participant {
 
-    private int runLength;
-    private int jumpHeight;
+    private final int runLength;
+    private final int jumpHeight;
 
     public Cat(int runLength, int jumpHeight) {
         this.runLength = runLength;
@@ -13,7 +13,7 @@ public class Cat implements Do {
 
     @Override
     public int jump() {
-        System.out.println("Кот перепрыгнул");
+        System.out.printf("Кот перепрыгнул %d%n", jumpHeight);
         return jumpHeight;
 
 
@@ -21,7 +21,7 @@ public class Cat implements Do {
 
     @Override
     public int  run() {
-        System.out.println("Кот пробежал");
+        System.out.printf("Кот пробежал %d%n", runLength);
         return runLength;
 
     }

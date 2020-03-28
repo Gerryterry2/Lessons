@@ -1,6 +1,6 @@
 package Lesson1;
 
-public interface Do {
+public interface Participant {
 
    int jump();
    int run();
